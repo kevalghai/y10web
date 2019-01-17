@@ -1,0 +1,109 @@
+<html>
+
+<h1 align="center" id="review">Technology Review</h1>
+	
+	
+ <h3 align="center">Macbook Air (2008)</h3>
+<p id=words>The MacBook Air is a apart of the Macintosh computers by the renowned corporation Apple. It includes a full sized keyboard, a machined aluminum case and a light pleasing structure. The MacBook Air is available with a screen size of (measured diagonally) 13.3 inches.</p>
+    <img src="air.png" width="50px" height="200px" class="center"/>
+  
+<h3 align="center" >IPhone X (2017)</h3>
+<p id=words>The IPhone X known as the IPhone 10, is one of the most recent but also significant phone released.. According to Apple, the iPhone X represents the biggest technological development since the original IPhone which was introduced 10 years ago in 2007, subsequently setting the path for the next decade of IPhones.</p>
+<img src="IphoneX.png" width="50px" height="200px" class="center"/>
+
+<h3 align="center">Apple Watch (2015)</h3>
+    <p id=words> The Apple Watch is a smartwatch released by Apple that relies on wireless connection to a IPhone to perform the essential aspects of what a legitimate phone would do however with seemingly easier accessibility. This could include, text, call, calculator and much more. </p>
+<img src="applewatch.png" width="10px" height="200px" class="center">
+    
+<style>
+      #review {
+  border: 1px solid #ddd;
+  padding: 8px;
+ font-family: cursive;
+  color:dodgerblue
+}
+    #words {
+    border: 5px solid #ddd;
+  padding: 8px;
+ font-family: cursive;
+ color:cadetblue
+ 
+}
+    .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+#technology {
+  font-family: cursive;
+  border-collapse: collapse;
+  width: 100%;
+  margin: auto;
+}
+
+#technology td, #technology th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#technology tr:nth-child(even){background-color: #f2f2f2;}
+
+#technology tr:hover {background-color: #ddd;}
+
+#technology th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+</style>
+
+<table id="technology" border="1">
+  <th>Technology</th><th>Price</th>
+  <tr>
+     <td>Macbook Air</td><td>$1500(approx.)</td>
+  </tr>
+  <tr>
+     <td>IPhone X</td><td>$1000(approx.)</td>
+  </tr>
+  <tr>
+     <td>Apple Watch</td><td>$400(approx.)</td>
+  </tr>
+</table>
+
+
+<script>
+
+function buildmyTable() {
+
+  var inventors = [{name:"Tim Berners-Lee",invention:"WWW & HTML"},{name:"Haken Wium Lie",invention:"CSS"},{name:"Brendan Eich",invention:"Javascript"}];
+
+  // build a string variable with all the table code and data
+  var mytable = "<table border='1'>";
+  mytable = mytable + "<th>Inventor</th><th>Invention</th>";
+
+  // loop through data table to add data
+  for (i = 0; i < inventors.length; i = i + 1) {
+    mytable = mytable + "<tr>";
+    mytable = mytable + "<td>" + inventors[i].name + "</td><td>" + inventors[i].invention + "</td>";
+    mytable = mytable + "</tr>";
+  }
+
+  mytable = mytable + "</table>";
+
+  // get the div and substitute mytable data for it
+  var placetoprint = document.getElementById("printmytable");
+  placetoprint.innerHTML = mytable;
+
+}
+
+buildmyTable()
+
+</script>
+
+
+</html>
