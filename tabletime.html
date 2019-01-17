@@ -5,7 +5,45 @@
 	
  <h3 align="center">Macbook Air (2008)</h3>
 <p id=words>The MacBook Air is a apart of the Macintosh computers by the renowned corporation Apple. It includes a full sized keyboard, a machined aluminum case and a light pleasing structure. The MacBook Air is available with a screen size of (measured diagonally) 13.3 inches.</p>
-    <img src="air.png" width="50px" height="200px" class="center"/>
+
+<style>
+.mySlides {display:none;}
+</style>
+<body>
+
+<h2 class="w3-center"></h2>
+
+<div class="w3-content w3-display-container" class="center">
+  <img class="mySlides" src="air.png" style="width:50%" class="center">
+  <img class="mySlides" src="macair.png" style="width:50%" align="center">
+  <img class="mySlides" src="comp.png" style="width:50%">
+  <img class="mySlides" src="back.png" style="width:50%">
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+</body>
   
 <h3 align="center" >IPhone X (2017)</h3>
 <p id=words>The IPhone X known as the IPhone 10, is one of the most recent but also significant phone released.. According to Apple, the iPhone X represents the biggest technological development since the original IPhone which was introduced 10 years ago in 2007, subsequently setting the path for the next decade of IPhones.</p>
